@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Labs.master.cs" Inherits="int422_123b24.Labs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Labs</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body bgcolor="Black">
+    <form id="form1" runat="server">
+    <div id="Header">
+        <asp:Table ID="Table1" runat="server" Width="600px" BackColor="#CCCCCC" 
+            BorderColor="#CC0000" BorderStyle="Double">
+            <asp:TableRow ID="TableRow1" runat="server">
+                <asp:TableCell ID="TableCell1" runat="server"><center><h3>  INT422 LABS</h3></center>Name : Jayeshkumar shivji Vasani aka Wasanipatel<br /></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow ID="TableRow2" runat="server">
+                <asp:TableCell ID="TableCell2" runat="server">Student # : 031-060-114 <br /></asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+        <br />
+    </div>
+    <div id="Body">
+        <asp:ContentPlaceHolder ID="Main" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="footer">
+
+        <br />
+
+    <asp:Table ID="Table2" runat="server" Width="600px" BackColor="Silver" 
+            BorderColor="#CC0000" BorderStyle="Double">
+            <asp:TableRow ID="TableRow3" runat="server">
+                <asp:TableCell ID="TableCell3" runat="server"><asp:HyperLink ID="HLhome" runat="server" NavigateUrl="~/Labs.aspx">Home</asp:HyperLink></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow ID="TableRow4" runat="server">
+                <asp:TableCell ID="TableCell4" runat="server"><a href="http://warp.senecac.on.ca/ian.tipson/default.aspx" title="Cource Website">Cource Website</a>.</asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+    </div>
+    </form>
+</body>
+</html>

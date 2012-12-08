@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/templates/Project.Master" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="int422_123b24.Project.Admin.AdminMaster" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="placeholder_1_widget_0" runat="server">
+        <asp:Menu ID="MenuUser" runat="server" Orientation="Horizontal" 
+            onmenuitemclick="MenuUser_MenuItemClick">
+            <Items>
+                <asp:MenuItem Text="Home" Value="Add Comment" 
+                    NavigateUrl="~/Project/Admin/Default.aspx"></asp:MenuItem>
+                <asp:MenuItem Enabled="False" Selectable="False" Text="|" Value="|">
+                </asp:MenuItem>
+                <asp:MenuItem Text="Create User" Value="View Comment" 
+                    NavigateUrl="~/Project/Admin/CreateUser.aspx"></asp:MenuItem>
+                <asp:MenuItem Enabled="False" Selectable="False" Text="|" Value="|">
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Project/Admin/DeleteUser.aspx" 
+                    Text="Delete User" Value="Search Student"></asp:MenuItem>
+                <asp:MenuItem Enabled="False" Selectable="False" Text="|" Value="|">
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Project/Admin/ChangePassward.aspx" Text="Change Pasward" 
+                    Value="Add Student"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+    
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <div align="center" >
+    <div style="width:70%;">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+   
+            <p>
+                <br />
+            </p>
+        
+   
+        </asp:ContentPlaceHolder></div>
+    </div>
+</asp:Content>

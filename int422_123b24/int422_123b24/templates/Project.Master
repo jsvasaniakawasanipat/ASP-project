@@ -1,0 +1,132 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Project.master.cs" Inherits="int422_123b24.templates.Project" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../style/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style3
+        {
+            width: 100%;
+            height: 144px;
+        }
+        .style4
+        {
+            width: 100%;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div align = "right">
+            Hello
+            <asp:LoginName ID="LoginName1" runat="server" />
+            ;
+            <asp:LoginStatus ID="LoginStatus1" runat="server" 
+                LogoutPageUrl="~/Login.aspx" LogoutAction="RedirectToLoginPage" />
+                <br />
+            <table width = "100%">
+                <tr>
+                    
+                    <td>
+                        <img alt="~/Images/head.jpg" class="style3" longdesc="~/Images/head.jpg" 
+                            src="<%= Page.ResolveUrl("~")%>Images/head.jpg" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;</td>
+               </tr>
+            </table>
+        </div>
+    &nbsp;<div runat="server" id="placeholder_1" class="sf_cols placeholder_1">
+		<div id="Div1" runat="server" style="float: left; width: 100%; margin: 0; " class="sf_colsOut">
+			<div id="Div2" runat="server" style=" padding: 7px; " class="sf_colsIn"  >
+				<asp:contentplaceholder id="placeholder_1_widget_0" runat="server" >
+                    
+               </asp:contentplaceholder>
+			</div>
+		</div>
+	</div>
+    <p style= "text-align: right">
+        &nbsp;</p>
+             
+        
+    <table class="style4">
+        <tr>
+            <td width = "150px" valign = "top">
+                <asp:Menu ID="Menu2" runat="server" BackColor="#E3EAEB" 
+                    DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" 
+                    ForeColor="#666666" StaticSubMenuIndent="10px">
+                    <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicMenuStyle BackColor="#E3EAEB" />
+                    <DynamicSelectedStyle BackColor="#1C5E55" />
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Home" Value="Home">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="http://www.senecac.on.ca" Text="Seneca Home Page" 
+                            Value="Seneca Home Page"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="https://scs.senecac.on.ca" Text="School of ICT" 
+                            Value="School of ICT"></asp:MenuItem>
+                        <asp:MenuItem Text="Login" Value="Login">
+                            <asp:MenuItem NavigateUrl="https://webmail.senecacollege.ca/owa/auth/logon.aspx?replaceCurrent=1&amp;url=https%3a%2f%2fwebmail.senecacollege.ca%2fowa%2f" 
+                                Text="Staff Webmail" Value="Staff Webmail"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="https://learn.senecac.on.ca/uwc/auth" 
+                                Text="Student Webmail" Value="Student Webmail"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="https://my.senecacollege.ca/webapps/portal/frameset.jsp" 
+                                Text="Blackboard" Value="Blackboard"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="https://open.senecac.on.ca/cms" Text="Moodle" 
+                                Value="Moodle"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="https://matrix.senecac.on.ca/board" Text="Matrix" 
+                                Value="Matrix"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="https://siris.senecac.on.ca/webapps/sirismain/index.html" 
+                                Text="Siris" Value="Siris"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Resources" Value="New Item">
+                            <asp:MenuItem NavigateUrl="https://acs.senecac.on.ca/pages/index.php" 
+                                Text="Academic Computing Systems" Value="Academic Computing Systems">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="http://zenit.senecac.on.ca/wiki/index.php/Main_Page" 
+                                Text="Center of Computing of Open Technology" 
+                                Value="Center of Computing of Open Technology"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="https://www.senecacareerlink.com/careerlink/index.do;jsessionid=9AB4F6635C502CD6A01A77A30CC2ED0D" 
+                                Text="Career Link" Value="Career Link"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="http://els.senecac.on.ca" 
+                                Text="English and Liberal Studies" Value="English and Liberal Studies">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="http://fsoss.senecac.on.ca/2012" 
+                                Text="Free Software and Open Source Symposium" 
+                                Value="Free Software and Open Source Symposium"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="http://www.senecac.on.ca/library" Text="Library" 
+                                Value="Library"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticSelectedStyle BackColor="#1C5E55" />
+                </asp:Menu>
+            </td>
+
+                <td valign = "top" align = "left">
+                   <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <br />
+                   </asp:ContentPlaceHolder>
+                </td>
+        </tr>
+        </table>
+&nbsp;<asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+   
+            <p>
+                <br />
+            </p>
+        
+   
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

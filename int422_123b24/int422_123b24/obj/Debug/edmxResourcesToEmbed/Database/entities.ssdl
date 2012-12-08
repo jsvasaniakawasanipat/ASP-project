@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="int422_123b24Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="int422_123b24ModelStoreContainer">
+    <EntitySet Name="author" EntityType="int422_123b24Model.Store.author" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="comments" EntityType="int422_123b24Model.Store.comments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="student" EntityType="int422_123b24Model.Store.student" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__comments__studen__0F975522" Association="int422_123b24Model.Store.FK__comments__studen__0F975522">
+      <End Role="student" EntitySet="student" />
+      <End Role="comments" EntitySet="comments" />
+    </AssociationSet>
+    <AssociationSet Name="fk_comments" Association="int422_123b24Model.Store.fk_comments">
+      <End Role="author" EntitySet="author" />
+      <End Role="comments" EntitySet="comments" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="author">
+    <Key>
+      <PropertyRef Name="author_id" />
+    </Key>
+    <Property Name="author_id" Type="varchar" Nullable="false" MaxLength="9" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="comments">
+    <Key>
+      <PropertyRef Name="comment_id" />
+    </Key>
+    <Property Name="comment_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="author_id" Type="varchar" Nullable="false" MaxLength="9" />
+    <Property Name="student_id" Type="varchar" Nullable="false" MaxLength="9" />
+    <Property Name="content" Type="varchar(max)" Nullable="false" />
+    <Property Name="created" Type="datetime" Nullable="false" />
+    <Property Name="reply" Type="bit" />
+    <Property Name="parent_id" Type="int" />
+    <Property Name="has_reply" Type="bit" />
+  </EntityType>
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="student_id" />
+    </Key>
+    <Property Name="student_id" Type="varchar" Nullable="false" MaxLength="9" />
+    <Property Name="name" Type="varchar" MaxLength="256" />
+  </EntityType>
+  <Association Name="FK__comments__studen__0F975522">
+    <End Role="student" Type="int422_123b24Model.Store.student" Multiplicity="1" />
+    <End Role="comments" Type="int422_123b24Model.Store.comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="comments">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_comments">
+    <End Role="author" Type="int422_123b24Model.Store.author" Multiplicity="1" />
+    <End Role="comments" Type="int422_123b24Model.Store.comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="author">
+        <PropertyRef Name="author_id" />
+      </Principal>
+      <Dependent Role="comments">
+        <PropertyRef Name="author_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

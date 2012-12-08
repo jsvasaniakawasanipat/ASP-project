@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="int422_123b24Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="int422_123b24Entities" annotation:LazyLoadingEnabled="true" a:TypeAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+    <EntitySet Name="authors" EntityType="int422_123b24Model.author" />
+    <EntitySet Name="comments" EntityType="int422_123b24Model.comment" />
+    <EntitySet Name="students" EntityType="int422_123b24Model.student" />
+    <AssociationSet Name="fk_comments" Association="int422_123b24Model.fk_comments">
+      <End Role="author" EntitySet="authors" />
+      <End Role="comments" EntitySet="comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__comments__studen__0F975522" Association="int422_123b24Model.FK__comments__studen__0F975522">
+      <End Role="student" EntitySet="students" />
+      <End Role="comments" EntitySet="comments" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="author">
+    <Key>
+      <PropertyRef Name="author_id" />
+    </Key>
+    <Property Name="author_id" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="comments" Relationship="int422_123b24Model.fk_comments" FromRole="author" ToRole="comments" />
+  </EntityType>
+  <EntityType Name="comment">
+    <Key>
+      <PropertyRef Name="comment_id" />
+    </Key>
+    <Property Name="comment_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="author_id" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+    <Property Name="student_id" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+    <Property Name="content" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="created" Type="DateTime" Nullable="false" />
+    <Property Name="reply" Type="Boolean" />
+    <Property Name="parent_id" Type="Int32" />
+    <Property Name="has_reply" Type="Boolean" />
+    <NavigationProperty Name="author" Relationship="int422_123b24Model.fk_comments" FromRole="comments" ToRole="author" />
+    <NavigationProperty Name="student" Relationship="int422_123b24Model.FK__comments__studen__0F975522" FromRole="comments" ToRole="student" />
+  </EntityType>
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="student_id" />
+    </Key>
+    <Property Name="student_id" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+    <Property Name="name" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="comments" Relationship="int422_123b24Model.FK__comments__studen__0F975522" FromRole="student" ToRole="comments" />
+  </EntityType>
+  <Association Name="fk_comments">
+    <End Role="author" Type="int422_123b24Model.author" Multiplicity="1" />
+    <End Role="comments" Type="int422_123b24Model.comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="author">
+        <PropertyRef Name="author_id" />
+      </Principal>
+      <Dependent Role="comments">
+        <PropertyRef Name="author_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__comments__studen__0F975522">
+    <End Role="student" Type="int422_123b24Model.student" Multiplicity="1" />
+    <End Role="comments" Type="int422_123b24Model.comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="comments">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

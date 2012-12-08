@@ -1,0 +1,578 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{70FC9F62-0CA9-43AF-A531-88FA58D60D7D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>int422_123b24</RootNamespace>
+    <AssemblyName>int422_123b24</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CKEditor.NET">
+      <HintPath>C:\Users\jayesh\Desktop\ckeditor_aspnet_3.6.4\bin\Release\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ckeditor_4.0_standard\ckeditor\build-config.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\ckeditor.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\config.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\contents.css" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\af.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\ar.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\bg.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\bn.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\bs.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\ca.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\cs.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\cy.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\da.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\de.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\el.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\en-au.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\en-ca.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\en-gb.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\en.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\eo.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\es.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\et.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\eu.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\fa.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\fi.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\fo.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\fr-ca.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\fr.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\gl.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\gu.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\he.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\hi.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\hr.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\hu.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\is.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\it.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\ja.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\ka.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\km.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\ko.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\ku.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\lt.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\lv.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\mk.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\mn.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\ms.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\nb.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\nl.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\no.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\pl.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\pt-br.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\pt.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\ro.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\ru.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\sk.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\sl.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\sr-latn.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\sr.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\sv.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\th.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\tr.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\ug.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\uk.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\vi.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\zh-cn.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\lang\zh.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\fakeobjects\images\spacer.gif" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\icons.png" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\ajax.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\api.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\appendto.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\assets\inlineall\logo.png" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\assets\sample.css" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\assets\sample.jpg" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\assets\uilanguages\languages.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\divreplace.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\index.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\inlineall.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\inlinebycode.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\plugins\dialog\assets\my_dialog.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\plugins\dialog\dialog.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\plugins\enterkey\enterkey.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.swf" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\swfobject.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\plugins\htmlwriter\outputforflash.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\plugins\htmlwriter\outputhtml.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\plugins\magicline\magicline.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\plugins\toolbar\toolbar.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\plugins\wysiwygarea\fullpage.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\readonly.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\replacebyclass.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\replacebycode.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\sample.css" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\sample.js" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\tabindex.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\uicolor.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\uilanguages.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\samples\xhtmlstyle.html" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\skins\moono\dialog.css" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\skins\moono\dialog_opera.css" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\skins\moono\editor.css" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\skins\moono\icons.png" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\skins\moono\images\close.png" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\skins\moono\images\mini.png" />
+    <Content Include="ckeditor_4.0_standard\ckeditor\styles.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="Images\background.jpg" />
+    <Content Include="Images\head.jpg" />
+    <Content Include="Images\logo.jpg" />
+    <Content Include="Images\logo2.jpg" />
+    <Content Include="Images\seneca.jpg" />
+    <Content Include="Lab2\Lab 2.aspx" />
+    <Content Include="Lab2\Lab2.ascx" />
+    <Content Include="Lab3\Lab3.aspx" />
+    <Content Include="Labs.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Project\Admin\ChangePassward.aspx" />
+    <Content Include="Project\Admin\CreateUser.aspx" />
+    <Content Include="Project\Admin\Default.aspx" />
+    <Content Include="Project\Admin\DeleteUser.aspx" />
+    <Content Include="Project\Public\Default.aspx" />
+    <Content Include="Project\User\AddComment.aspx" />
+    <Content Include="Project\User\AddStudent.aspx" />
+    <Content Include="Project\User\ChangePassward.aspx" />
+    <Content Include="Project\User\CommentView.aspx" />
+    <Content Include="Project\User\Default.aspx" />
+    <Content Include="Project\User\msgbox.aspx" />
+    <Content Include="Project\User\StudentSearch.aspx" />
+    <Content Include="style\Site.css" />
+    <Content Include="style\style.css" />
+    <Content Include="testing\WebForm1.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\manager.cs" />
+    <Compile Include="Database\aspnet_Applications.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\aspnet_Membership.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\aspnet_Paths.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\aspnet_PersonalizationAllUsers.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\aspnet_PersonalizationPerUser.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\aspnet_Profile.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\aspnet_Roles.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\aspnet_SchemaVersions.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\aspnet_Users.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\aspnet_WebEvent_Events.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\author.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\comment.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\student.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lab2\Lab 2.aspx.cs">
+      <DependentUpon>Lab 2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lab2\Lab 2.aspx.designer.cs">
+      <DependentUpon>Lab 2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lab2\Lab2.ascx.cs">
+      <DependentUpon>Lab2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lab2\Lab2.ascx.designer.cs">
+      <DependentUpon>Lab2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Lab3\Lab3.aspx.cs">
+      <DependentUpon>Lab3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lab3\Lab3.aspx.designer.cs">
+      <DependentUpon>Lab3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lab3\Lab3FileManagerClass.cs" />
+    <Compile Include="Labs.aspx.cs">
+      <DependentUpon>Labs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Labs.aspx.designer.cs">
+      <DependentUpon>Labs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lab2\Lab2.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Admin\AdminMaster.master.cs">
+      <DependentUpon>AdminMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\Admin\AdminMaster.master.designer.cs">
+      <DependentUpon>AdminMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Admin\ChangePassward.aspx.cs">
+      <DependentUpon>ChangePassward.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\Admin\ChangePassward.aspx.designer.cs">
+      <DependentUpon>ChangePassward.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Admin\CreateUser.aspx.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\Admin\CreateUser.aspx.designer.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Admin\DeleteUser.aspx.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\Admin\DeleteUser.aspx.designer.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Public\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\Public\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\User\AddComment.aspx.cs">
+      <DependentUpon>AddComment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\User\AddComment.aspx.designer.cs">
+      <DependentUpon>AddComment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\User\AddStudent.aspx.cs">
+      <DependentUpon>AddStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\User\AddStudent.aspx.designer.cs">
+      <DependentUpon>AddStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\User\ChangePassward.aspx.cs">
+      <DependentUpon>ChangePassward.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\User\ChangePassward.aspx.designer.cs">
+      <DependentUpon>ChangePassward.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\User\CommentView.aspx.cs">
+      <DependentUpon>CommentView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\User\CommentView.aspx.designer.cs">
+      <DependentUpon>CommentView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\User\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\User\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\User\msgbox.aspx.cs">
+      <DependentUpon>msgbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\User\msgbox.aspx.designer.cs">
+      <DependentUpon>msgbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\User\StudentSearch.aspx.cs">
+      <DependentUpon>StudentSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\User\StudentSearch.aspx.designer.cs">
+      <DependentUpon>StudentSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project\User\UserMaster.master.cs">
+      <DependentUpon>UserMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project\User\UserMaster.master.designer.cs">
+      <DependentUpon>UserMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="templates\Labs.Master.cs">
+      <DependentUpon>Labs.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Labs.Master.designer.cs">
+      <DependentUpon>Labs.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="templates\Project.Master.cs">
+      <DependentUpon>Project.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="templates\Project.Master.designer.cs">
+      <DependentUpon>Project.Master</DependentUpon>
+    </Compile>
+    <Compile Include="testing\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testing\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="templates\Labs.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="templates\Project.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Database\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ckeditor_4.0_standard\ckeditor\CHANGES.md" />
+    <None Include="ckeditor_4.0_standard\ckeditor\LICENSE.md" />
+    <None Include="ckeditor_4.0_standard\ckeditor\README.md" />
+    <None Include="ckeditor_4.0_standard\ckeditor\samples\assets\posteddata.php" />
+    <None Include="ckeditor_4.0_standard\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <None Include="ckeditor_4.0_standard\ckeditor\samples\sample_posteddata.php" />
+    <None Include="ckeditor_4.0_standard\ckeditor\skins\moono\readme.md" />
+    <None Include="Database\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Database\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </None>
+    <Content Include="Project\User\UserMaster.master" />
+    <Content Include="Project\Admin\AdminMaster.master" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55950</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

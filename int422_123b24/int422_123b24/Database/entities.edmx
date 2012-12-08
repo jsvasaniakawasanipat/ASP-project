@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="int422_123b24Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="int422_123b24ModelStoreContainer">
+          <EntitySet Name="author" EntityType="int422_123b24Model.Store.author" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="comments" EntityType="int422_123b24Model.Store.comments" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="student" EntityType="int422_123b24Model.Store.student" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__comments__studen__0F975522" Association="int422_123b24Model.Store.FK__comments__studen__0F975522">
+            <End Role="student" EntitySet="student" />
+            <End Role="comments" EntitySet="comments" />
+          </AssociationSet>
+          <AssociationSet Name="fk_comments" Association="int422_123b24Model.Store.fk_comments">
+            <End Role="author" EntitySet="author" />
+            <End Role="comments" EntitySet="comments" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="author">
+          <Key>
+            <PropertyRef Name="author_id" />
+          </Key>
+          <Property Name="author_id" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="comments">
+          <Key>
+            <PropertyRef Name="comment_id" />
+          </Key>
+          <Property Name="comment_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="author_id" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="student_id" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="content" Type="varchar(max)" Nullable="false" />
+          <Property Name="created" Type="datetime" Nullable="false" />
+          <Property Name="reply" Type="bit" />
+          <Property Name="parent_id" Type="int" />
+          <Property Name="has_reply" Type="bit" />
+        </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="student_id" />
+          </Key>
+          <Property Name="student_id" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="name" Type="varchar" MaxLength="256" />
+        </EntityType>
+        <Association Name="FK__comments__studen__0F975522">
+          <End Role="student" Type="int422_123b24Model.Store.student" Multiplicity="1" />
+          <End Role="comments" Type="int422_123b24Model.Store.comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="student">
+              <PropertyRef Name="student_id" />
+            </Principal>
+            <Dependent Role="comments">
+              <PropertyRef Name="student_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_comments">
+          <End Role="author" Type="int422_123b24Model.Store.author" Multiplicity="1" />
+          <End Role="comments" Type="int422_123b24Model.Store.comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="author">
+              <PropertyRef Name="author_id" />
+            </Principal>
+            <Dependent Role="comments">
+              <PropertyRef Name="author_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="int422_123b24Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="int422_123b24Entities" annotation:LazyLoadingEnabled="true" a:TypeAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <EntitySet Name="authors" EntityType="int422_123b24Model.author" />
+          <EntitySet Name="comments" EntityType="int422_123b24Model.comment" />
+          <EntitySet Name="students" EntityType="int422_123b24Model.student" />
+          <AssociationSet Name="fk_comments" Association="int422_123b24Model.fk_comments">
+            <End Role="author" EntitySet="authors" />
+            <End Role="comments" EntitySet="comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__comments__studen__0F975522" Association="int422_123b24Model.FK__comments__studen__0F975522">
+            <End Role="student" EntitySet="students" />
+            <End Role="comments" EntitySet="comments" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="author">
+          <Key>
+            <PropertyRef Name="author_id" />
+          </Key>
+          <Property Name="author_id" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="comments" Relationship="int422_123b24Model.fk_comments" FromRole="author" ToRole="comments" />
+        </EntityType>
+        <EntityType Name="comment">
+          <Key>
+            <PropertyRef Name="comment_id" />
+          </Key>
+          <Property Name="comment_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="author_id" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="student_id" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="content" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="created" Type="DateTime" Nullable="false" />
+          <Property Name="reply" Type="Boolean" />
+          <Property Name="parent_id" Type="Int32" />
+          <Property Name="has_reply" Type="Boolean" />
+          <NavigationProperty Name="author" Relationship="int422_123b24Model.fk_comments" FromRole="comments" ToRole="author" />
+          <NavigationProperty Name="student" Relationship="int422_123b24Model.FK__comments__studen__0F975522" FromRole="comments" ToRole="student" />
+        </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="student_id" />
+          </Key>
+          <Property Name="student_id" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="name" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="comments" Relationship="int422_123b24Model.FK__comments__studen__0F975522" FromRole="student" ToRole="comments" />
+        </EntityType>
+        <Association Name="fk_comments">
+          <End Role="author" Type="int422_123b24Model.author" Multiplicity="1" />
+          <End Role="comments" Type="int422_123b24Model.comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="author">
+              <PropertyRef Name="author_id" />
+            </Principal>
+            <Dependent Role="comments">
+              <PropertyRef Name="author_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__comments__studen__0F975522">
+          <End Role="student" Type="int422_123b24Model.student" Multiplicity="1" />
+          <End Role="comments" Type="int422_123b24Model.comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="student">
+              <PropertyRef Name="student_id" />
+            </Principal>
+            <Dependent Role="comments">
+              <PropertyRef Name="student_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="int422_123b24ModelStoreContainer" CdmEntityContainer="int422_123b24Entities">
+          <EntitySetMapping Name="authors"><EntityTypeMapping TypeName="int422_123b24Model.author"><MappingFragment StoreEntitySet="author">
+            <ScalarProperty Name="author_id" ColumnName="author_id" />
+            <ScalarProperty Name="name" ColumnName="name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="comments"><EntityTypeMapping TypeName="int422_123b24Model.comment"><MappingFragment StoreEntitySet="comments">
+            <ScalarProperty Name="comment_id" ColumnName="comment_id" />
+            <ScalarProperty Name="author_id" ColumnName="author_id" />
+            <ScalarProperty Name="student_id" ColumnName="student_id" />
+            <ScalarProperty Name="content" ColumnName="content" />
+            <ScalarProperty Name="created" ColumnName="created" />
+            <ScalarProperty Name="reply" ColumnName="reply" />
+            <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+            <ScalarProperty Name="has_reply" ColumnName="has_reply" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="students"><EntityTypeMapping TypeName="int422_123b24Model.student"><MappingFragment StoreEntitySet="student">
+            <ScalarProperty Name="student_id" ColumnName="student_id" />
+            <ScalarProperty Name="name" ColumnName="name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="entities">
+        <EntityTypeShape EntityType="int422_123b24Model.author" Width="1.5" PointX="0.75" PointY="1.625" Height="1.5956835937499998" IsExpanded="true" />
+        <EntityTypeShape EntityType="int422_123b24Model.comment" Width="1.5" PointX="3" PointY="1" Height="2.9417936197916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="int422_123b24Model.student" Width="1.5" PointX="0.75" PointY="5.625" Height="1.5956835937499996" IsExpanded="true" />
+        <AssociationConnector Association="int422_123b24Model.fk_comments" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.422841796875" />
+          <ConnectorPoint PointX="3" PointY="2.422841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="int422_123b24Model.FK__comments__studen__0F975522" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="6.422841796875" />
+          <ConnectorPoint PointX="3.75" PointY="6.422841796875" />
+          <ConnectorPoint PointX="3.75" PointY="3.9417936197916656" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
